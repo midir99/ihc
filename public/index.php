@@ -9,6 +9,8 @@
 
 define('LARAVEL_START', microtime(true));
 
+//Esto es un comentario prueba ***
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
