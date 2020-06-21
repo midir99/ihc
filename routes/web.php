@@ -20,3 +20,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::match(['get', 'post'], 'user/cambiarclave', 'UserController@cambiarclave');
+
+// E-mail verificación
+Route::get('/register/verificar/{code}', 'UserController@verificar');
+
+// E-mail reenvio
+Route::get('/register/reenviar', 'UserController@reenviar')->name('user.reenviar');;
+
+Route::resource("user","UserController");
+
+Route::resource("baja","BajaController");
