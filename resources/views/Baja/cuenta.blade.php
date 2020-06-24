@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Cambiar contraseña</div>
+                <div class="card-header" style="color:  #FFFFFF; background-color: #3f71b4;">Eliminar cuenta</div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #abe5ff;">
                 <form method="POST" action="{{ route('baja.store')}}" onsubmit="return pregunta()">
                         @csrf
 

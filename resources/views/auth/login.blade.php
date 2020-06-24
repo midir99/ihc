@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Inicio de sesión') }}</div>
+                <div class="card-header" style="color:  #FFFFFF; background-color: #3f71b4;">{{ __('Inicio de sesión') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #abe5ff;">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         @if(session('message'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success" role="alert" style="background-color: #FFFFFF; color: #000000;">
                             {{session('message')}}
                         </div>
                         @endif
@@ -23,7 +23,7 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" >
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -63,7 +63,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" href="{{ route('password.request') }}" style=" color: #3f71b4;">
                                         {{ __('¿Olvidaste tu contraseña?') }}
                                     </a>
                                 @endif

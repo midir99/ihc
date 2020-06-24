@@ -45,7 +45,9 @@ class BajaController extends Controller
         //Mail::send('emails.cuenta_eliminada', $data, function($message) use ($data) {
         //    $message->to($data['email'], $data['name'])->subject('Notificación de cuenta');
         //});
-        $user = User::select("email")->get();
+        #$user = User::select("email")->get();
+        $user = new User;
+        $user->email = auth::user()->email;
         \Notification::send($user, new cuenta_eliminada($correo));
 
         // Registrar respuesta

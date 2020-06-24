@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Recuperar contraseña') }}</div>
+            <div class="card" >
+                <div class="card-header" style="color:  #FFFFFF; background-color: #3f71b4;">{{ __('Recuperar contraseña') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #abe5ff;">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success" role="alert" style="background-color: #FFFFFF; color: #000000;">
                             {{ session('status') }}
                         </div>
                     @endif
